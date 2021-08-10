@@ -1,15 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .calculator-board {
-  width: 30%;
+  width: 25%;
   padding-bottom: 1px;
   background-color: lightgray;
 }
 
 .output-box {
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   text-align: end;
-  padding: 15px 5px;
-  background-color: lightslategray;
+  padding: 10px 2px;
+  background-color: #858693;
 }
 
 button:hover {
@@ -31,7 +36,7 @@ button:active {
 .grid-item {
   border: none;
   height: 48px;
-  background-color: white;
+  background-color: #e0e0e0;
 }
 
 .span-2-col {
@@ -39,5 +44,5 @@ button:active {
 }
 
 .bg-orange {
-  background-color: orange;
+  background-color: #f5913e;
 }
