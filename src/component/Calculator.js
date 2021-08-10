@@ -65,3 +65,28 @@ const buttons = [
     className: 'bg-orange',
   },
 ];
+
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayNum: '0',
+    };
+  }
+
+  render() {
+    const { displayNum } = this.state;
+
+    return (
+      <div className="calculator-board">
+        <p className="output-box">{displayNum}</p>
+        <div className="grid">
+          {buttons.map(({ text, className }) => <button className={`grid-item ${className || ''}`} key={text} type="button">{text}</button>)}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Calculator;
