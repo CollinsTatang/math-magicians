@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .calculator-board {
   width: 25%;
   padding-bottom: 1px;
@@ -14,6 +9,7 @@
   font-size: 30px;
   text-align: end;
   padding: 10px 2px;
+  margin-bottom: 0;
   background-color: #858693;
 }
 
@@ -29,13 +25,12 @@ button:active {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1px;
-  margin-top: 1px;
+  gap: 2px;
 }
 
 .grid-item {
   border: none;
-  height: 48px;
+  height: 45px;
   background-color: #e0e0e0;
 }
 
@@ -43,6 +38,6 @@ button:active {
   grid-column: 1 / span 2;
 }
 
-.bg-orange {
+.btn-color {
   background-color: #f5913e;
 }

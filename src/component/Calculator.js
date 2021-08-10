@@ -12,7 +12,7 @@ const buttons = [
   },
   {
     text: '÷',
-    className: 'bg-orange',
+    className: 'btn-color',
   },
   {
     text: '7',
@@ -25,7 +25,7 @@ const buttons = [
   },
   {
     text: 'x',
-    className: 'bg-orange',
+    className: 'btn-color',
   },
   {
     text: '4',
@@ -38,7 +38,7 @@ const buttons = [
   },
   {
     text: '-',
-    className: 'bg-orange',
+    className: 'btn-color',
   },
   {
     text: '1',
@@ -51,7 +51,7 @@ const buttons = [
   },
   {
     text: '+',
-    className: 'bg-orange',
+    className: 'btn-color',
   },
   {
     text: '0',
@@ -62,7 +62,7 @@ const buttons = [
   },
   {
     text: '=',
-    className: 'bg-orange',
+    className: 'btn-color',
   },
 ];
 
@@ -82,7 +82,7 @@ class Calculator extends React.Component {
       <div className="calculator-board">
         <p className="output-box">{displayNum}</p>
         <div className="grid">
-          {buttons.map(({ text, className }) => <button className={`grid-item ${className || ''}`} key={text} type="button">{text}</button>)}
+          {buttons.map(({ text, className }) => <button className={`grid-item  ${className || ''}`} key={text} type="button">{text}</button>)}
         </div>
       </div>
     );
