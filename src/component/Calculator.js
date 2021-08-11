@@ -78,13 +78,18 @@ class Calculator extends React.Component {
     this.setState((nextState) => calculate(nextState, e.target.value));
   };
 
-  
+  displayOutput = () => {
+    const { total, next, operation } = this.state;
+    const displayNum = (total || '') + (operation || '') + (next || '');
+
+    return displayNum || '0';
+  };
 
   render() {
     return (
       <div className="calculator-board">
         <div className="output-box">
-          <p>{}</p>
+          <p>{this.displayOutput()}</p>
         </div>
         <div className="grid">
           {buttons.map(({ text, className }) => (
