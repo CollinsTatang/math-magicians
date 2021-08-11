@@ -67,4 +67,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/CollinsTatang/math-magicians/tree/add-license-1) licensed.
+This project is [MIT](./MIT.md) licensed.
