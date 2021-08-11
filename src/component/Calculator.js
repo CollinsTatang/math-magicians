@@ -1,4 +1,5 @@
 import React from 'react';
+import calculate from '../logic/calculator';
 
 const buttons = [
   {
@@ -70,19 +71,31 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      displayNum: '0',
-    };
+    this.state = {};
   }
 
-  render() {
-    const { displayNum } = this.state;
+  onClickHandler = (e) => {
+    this.setState((nextState) => calculate(nextState, e.target.value));
+  };
 
+  
+
+  render() {
     return (
       <div className="calculator-board">
-        <p className="output-box">{displayNum}</p>
+        <div className="output-box">
+          <p>{}</p>
+        </div>
         <div className="grid">
-          {buttons.map(({ text, className }) => <button className={`grid-item  ${className || ''}`} key={text} type="button">{text}</button>)}
+          {buttons.map(({ text, className }) => (
+            <input
+              value={text}
+              className={`button grid-item ${className || ''}`}
+              key={text}
+              type="button"
+              onClick={this.onClickHandler}
+            />
+          ))}
         </div>
       </div>
     );
