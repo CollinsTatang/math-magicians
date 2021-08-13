@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import calculate from '../logic/calculator';
 
 const buttons = [
@@ -67,44 +67,44 @@ const buttons = [
   },
 ];
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
+const Calculator = () => {
+  const [state, setState] = useState({});
 
-    this.state = {};
-  }
+  const onClickHandler = useCallback((e) => {
+    setState((nextState) => {
+      try {
+        const display = calculate(nextState, e.target.value);
+        return ({
+          ...nextState,
+          ...display,
+        });
+      } catch (error) {
+        return nextState;
+      }
+    });
+  }, []);
 
-  onClickHandler = (e) => {
-    this.setState((nextState) => calculate(nextState, e.target.value));
-  };
+  const { total, next, operation } = state;
+  const displayNum = (total || '') + (operation || '') + (next || '');
 
-  displayOutput = () => {
-    const { total, next, operation } = this.state;
-    const displayNum = (total || '') + (operation || '') + (next || '');
-
-    return displayNum || '0';
-  };
-
-  render() {
-    return (
-      <div className="calculator-board">
-        <div className="output-box">
-          <p>{this.displayOutput()}</p>
-        </div>
-        <div className="grid">
-          {buttons.map(({ text, className }) => (
-            <input
-              value={text}
-              className={`button grid-item ${className || ''}`}
-              key={text}
-              type="button"
-              onClick={this.onClickHandler}
-            />
-          ))}
-        </div>
+  return (
+    <div className="calculator-board">
+      <div className="output-box">
+        <p>{displayNum || '0'}</p>
       </div>
-    );
-  }
-}
+      <div className="grid">
+        {buttons.map(({ text, className }) => (
+          <input
+            value={text}
+            className={`button grid-item ${className || ''}`}
+            key={text}
+            type="button"
+            onClick={onClickHandler}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Calculator;
