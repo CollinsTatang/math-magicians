@@ -72,11 +72,15 @@ const Calculator = () => {
 
   const onClickHandler = useCallback((e) => {
     setState((nextState) => {
-      const display = calculate(nextState, e.target.value);
-      return ({
-        ...nextState,
-        ...display,
-      });
+      try {
+        const display = calculate(nextState, e.target.value);
+        return ({
+          ...nextState,
+          ...display,
+        });
+      } catch (error) {
+        return nextState;
+      }
     });
   }, []);
 
