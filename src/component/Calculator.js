@@ -79,7 +79,7 @@ const Calculator = () => {
           ...display,
         });
       } catch (error) {
-        return nextState;
+        return '';
       }
     });
   }, []);
