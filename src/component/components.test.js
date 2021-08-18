@@ -11,4 +11,11 @@ describe('Home component', () => {
     render(<Home />);
     expect(screen.getByText(/Welcome to our page!/)).toBeInTheDocument;
   })
+});
+
+describe('Calculator component', () => {
+  test('Calculator component render', () => {
+    render(<Calculator />);
+    expect(screen.getByText(/Let's do some math/)).toBeInTheDocument;
+  })
 })
