@@ -44,4 +44,11 @@ describe('Click events', () => {
     userEvent.click(screen.getByText('Calculator'));
     expect(screen.getByText(/Let's do some math/)).toBeInTheDocument;
   })
+
+  test('Quote click event', () => {
+    render(<App />);
+    expect(screen.queryByText(/Mathematics is not about numbers/)).toBeNull();
+    userEvent.click(screen.getByText('Quote'));
+    expect(screen.getByText(/Mathematics is not about numbers/)).toBeInTheDocument;
+  })
 });
