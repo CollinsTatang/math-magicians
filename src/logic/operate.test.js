@@ -1,5 +1,15 @@
 import operate from './operate';
 
+describe('Supported calculator operators', () => {
+  test('2 + 2 = 4', () => {
+    const a = 2;
+    const b = 2;
+
+    const answer = operate(a, b, '+');
+
+    expect(answer).toBe('4');
+  });
+
 test('-2 + 2 = 0', () => {
   const a = -2;
   const b = 2;
@@ -44,7 +54,9 @@ test('4 % 2 = 0', () => {
 
   expect(answer).toBe('0');
 });
+});
 
+describe('Invalid operations', () => {
 test('4 ÷ 0 = error', () => {
   const a = 4;
   const b = 0;
@@ -64,4 +76,5 @@ test('4 ! 0 = error', () => {
   catch(e) {
     expect(e).toBeInstanceOf(Error);
   }
+});
 });
