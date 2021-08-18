@@ -44,3 +44,12 @@ test('4 % 2 = 0', () => {
 
   expect(answer).toBe('0');
 });
+
+test('4 ÷ 0 = error', () => {
+  const a = 4;
+  const b = 0;
+
+  const answer = operate(a, b, '÷');
+
+  expect(answer).toBe('error');
+});
