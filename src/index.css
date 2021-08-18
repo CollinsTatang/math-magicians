@@ -1,42 +1,55 @@
-.calculator-board {
-  width: 25%;
-  padding-bottom: 1px;
-  background-color: lightgray;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  width: 100%;
+  background-color: #ecf0f1;
 }
 
-.output-box {
-  color: white;
-  font-size: 30px;
-  text-align: end;
-  padding: 1px 2px;
-  background-color: #858693;
+ul {
+  list-style-type: none;
 }
 
-button:hover {
-  opacity: 0.9;
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-button:active {
-  opacity: 0.3;
+.app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2px;
+.nav-links {
+  display: flex;
+  gap: 40px;
 }
 
-.grid-item {
-  border: none;
-  height: 45px;
-  background-color: #e0e0e0;
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.span-2-col {
-  grid-column: 1 / span 2;
+.container {
+  padding: 16px 24px;
+  display: flex;
+  flex-grow: 1;
 }
 
-.btn-color {
-  background-color: #f5913e;
+.app-title {
+  color: #000;
+}
+
+.section-title {
+  font-size: 48px;
+  color: #000;
+}
+
+.active {
+  font-weight: bold;
+  color: blue;
 }

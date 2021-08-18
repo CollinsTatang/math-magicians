@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+.quote-section {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 40px;
+  padding: 5%;
+}
+
+.quote {
+  font-size: 30px;
+  color: #212121;
+  font-family: "Playfair Display", serif;
+}
