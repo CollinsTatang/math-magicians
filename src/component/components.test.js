@@ -28,6 +28,13 @@ describe('Quote component', () => {
   });
 });
 
+describe('Header component', () => {
+  test('Header component render', () => {
+    render(<App />);
+    expect(screen.getByText(/Math Magicians/)).toBeInTheDocument;
+  });
+});
+
 describe('Click events', () => {
   test('Home click event', () => {
     render(<App />);
