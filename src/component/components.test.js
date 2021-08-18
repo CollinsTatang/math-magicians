@@ -5,6 +5,7 @@ import App from '../App';
 import Home from './Home';
 import Calculator from './Calculator'
 import Quote from './Quote';
+import userEvent from '@testing-library/user-event';
 
 describe('Home component', () => {
   test('Home component render',() => {
@@ -24,5 +25,15 @@ describe('Quote component', () => {
   test('Quote component render', () => {
     render(<Quote />);
     expect(screen.getByRole('heading')).toBeInTheDocument;
+  })
+});
+
+describe('Click events', () => {
+  test('Home click event', () => {
+    render(<App />);
+    userEvent.click(screen.getByText('Quote'));
+    expect(screen.queryByText(/Welcome to our page!/)).toBeNull();
+    userEvent.click(screen.getByText('Home'));
+    expect(screen.getByText(/Welcome to our page!/)).toBeInTheDocument();
   })
 });
