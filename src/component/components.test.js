@@ -29,11 +29,19 @@ describe('Quote component', () => {
 });
 
 describe('Click events', () => {
+
   test('Home click event', () => {
     render(<App />);
     userEvent.click(screen.getByText('Quote'));
     expect(screen.queryByText(/Welcome to our page!/)).toBeNull();
     userEvent.click(screen.getByText('Home'));
     expect(screen.getByText(/Welcome to our page!/)).toBeInTheDocument();
+  })
+
+  test('Calculator click event', () => {
+    render(<App />);
+    expect(screen.queryByText(/Let's do some math/)).toBeNull();
+    userEvent.click(screen.getByText('Calculator'));
+    expect(screen.getByText(/Let's do some math/)).toBeInTheDocument;
   })
 });
