@@ -53,3 +53,15 @@ test('4 ÷ 0 = error', () => {
 
   expect(answer).toBe('error');
 });
+
+test('4 ! 0 = error', () => {
+  const a = 4;
+  const b = 0;
+
+  try {
+    const answer = operate(a, b, '!');
+  }
+  catch(e) {
+    expect(e).toBeInstanceOf(Error);
+  }
+});
