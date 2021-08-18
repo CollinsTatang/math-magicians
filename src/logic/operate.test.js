@@ -10,71 +10,77 @@ describe('Supported calculator operators', () => {
     expect(answer).toBe('4');
   });
 
-test('-2 + 2 = 0', () => {
-  const a = -2;
-  const b = 2;
+  test('-2 + 2 = 0', () => {
+    const a = -2;
+    const b = 2;
 
-  const answer = operate(a, b, '+');
+    const answer = operate(a, b, '+');
 
-  expect(answer).toBe('0');
-});
+    expect(answer).toBe('0');
+  });
 
-test('4 - 2 = 2', () => {
-  const a = 4;
-  const b = 2;
+  test('4 - 2 = 2', () => {
+    const a = 4;
+    const b = 2;
 
-  const answer = operate(a, b, '-');
+    const answer = operate(a, b, '-');
 
-  expect(answer).toBe('2');
-});
+    expect(answer).toBe('2');
+  });
 
-test('4 x 2 = 8', () => {
-  const a = 4;
-  const b = 2;
+  test('4 x 2 = 8', () => {
+    const a = 4;
+    const b = 2;
 
-  const answer = operate(a, b, 'x');
+    const answer = operate(a, b, 'x');
 
-  expect(answer).toBe('8');
-});
+    expect(answer).toBe('8');
+  });
 
-test('4 ÷ 2 = 2', () => {
-  const a = 4;
-  const b = 2;
+  test('4 ÷ 2 = 2', () => {
+    const a = 4;
+    const b = 2;
 
-  const answer = operate(a, b, '÷');
+    const answer = operate(a, b, '÷');
 
-  expect(answer).toBe('2');
-});
+    expect(answer).toBe('2');
+  });
 
-test('4 % 2 = 0', () => {
-  const a = 4;
-  const b = 2;
+  test('4 % 2 = 0', () => {
+    const a = 4;
+    const b = 2;
 
-  const answer = operate(a, b, '%');
+    const answer = operate(a, b, '%');
 
-  expect(answer).toBe('0');
-});
+    expect(answer).toBe('0');
+  });
 });
 
 describe('Invalid operations', () => {
-test('4 ÷ 0 = error', () => {
-  const a = 4;
-  const b = 0;
+  test('4 ÷ 0 = error', () => {
+    const a = 4;
+    const b = 0;
 
-  const answer = operate(a, b, '÷');
+    const answer = operate(a, b, '÷');
 
-  expect(answer).toBe('error');
-});
+    expect(answer).toBe('error');
+  });
 
-test('4 ! 0 = error', () => {
-  const a = 4;
-  const b = 0;
+  test('2 * 2 ', () => {
+    const a = 2;
+    const b = 2;
 
-  try {
-    const answer = operate(a, b, '!');
-  }
-  catch(e) {
-    expect(e).toBeInstanceOf(Error);
-  }
-});
+    const unsupportedOperation = () => operate(a, b, '*');
+
+    expect(() => unsupportedOperation()).toThrow("Unknown operation '*'");
+  });
+
+  test('2/2 ', () => {
+    const a = 2;
+    const b = 2;
+
+    const unsupportedOperation = () => operate(a, b, '/');
+
+    expect(() => unsupportedOperation()).toThrow("Unknown operation '/'");
+  });
 });

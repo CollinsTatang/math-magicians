@@ -1,4 +1,4 @@
-import calculate from './calculator.js';
+import calculate from './calculator';
 
 describe('Quick maths', () => {
   test('2 + 2 = 4', () => {
@@ -109,4 +109,3 @@ describe('Quick maths', () => {
     });
   });
 });
-
