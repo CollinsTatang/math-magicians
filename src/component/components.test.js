@@ -18,4 +18,11 @@ describe('Calculator component', () => {
     render(<Calculator />);
     expect(screen.getByText(/Let's do some math/)).toBeInTheDocument;
   })
-})
+});
+
+describe('Quote component', () => {
+  test('Quote component render', () => {
+    render(<Quote />);
+    expect(screen.getByRole('heading')).toBeInTheDocument;
+  })
+});
