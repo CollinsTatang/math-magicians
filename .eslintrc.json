@@ -20,6 +20,14 @@
     "import/no-unresolved": "off",
     "no-shadow": "off"
   },
+  "overrides": [
+        {
+            "files": ["*.test.js", "*.spec.js"],
+            "rules": {
+                "no-unused-expressions": "off"
+            }
+        }
+    ],
   "ignorePatterns": [
     "dist/",
     "build/"
