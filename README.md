@@ -1,7 +1,9 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 "Math magicians" is a website use to manage all mathematical operation. It allows users to make simple calculations and read a random math-releted quote.
+### Live
 
+[Live](https://adoring-jackson-364b0f.netlify.app/)
 ## Built With
 
 - ReactJS
