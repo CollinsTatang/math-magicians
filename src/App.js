@@ -1,10 +1,12 @@
 import React from 'react';
+import Calculator from './components/Calculator';
 
 function App() {
   return (
     <div>
-      <h1>Math Mathgician</h1>
+      <Calculator />
     </div>
   );
 }
+
 export default App;
