@@ -32,6 +32,8 @@
 
 **Math Magicians** Math Magicians website is an application used to display a single page application that contains home section,a calculator section and a quote section.
 
+![image](https://github.com/CollinsTatang/math-magicians/assets/55596970/43c26913-8eb0-45cd-9f9f-3d0a1e519d75)
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,7 +46,6 @@
     <li><a href="https://www.w3schools.com/html/default.asp">React</a></li>
   </ul>
 </details>
-
 
 
 ### Key Features <a name="key-features"></a>
@@ -136,7 +137,6 @@ Run this  command:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and features requests are welcome!
@@ -160,7 +160,6 @@ If you like this project give it a star⭐️.
 I would like to thank Microverse for the overwhelming support for giving me an overview in this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ## 📝 License <a name="license"></a>
