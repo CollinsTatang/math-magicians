@@ -49,7 +49,7 @@ function Calculator() {
         {buttons.map(({ text, className }) => (
           <input
             value={text}
-            className={`button grid-item ${className || ''}`}
+            className={`grid-item ${className || ''}`}
             key={text}
             type="button"
             onClick={onClickHandler}
